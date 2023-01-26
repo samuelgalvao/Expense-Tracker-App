@@ -1,0 +1,22 @@
+inputs:
+    date
+    description
+    amount
+
+functions:
+    "add amount"
+    "delete"
+    "total"
+
+classes:
+    Food
+    Bills
+    Fun
+    Others
+
+the app is gonna take the date, the description and the amount, it's gonna ask the "class" of that amount, and after this the amount is already 'save' on the 'data base'
+
+Goals:
+    Use module style
+    learn ReactNative (not a priority)
+    Make a mobile app

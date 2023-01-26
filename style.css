@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --darkGreen: #025928;
+    --lightGreen: #1CA673;
+    --gray: #88898C;
+    --white: #F2F2F2;
+    --grayGreen: #80BFAD;
+}
+body{
+    
+    background-image: 
+      linear-gradient(to top, 
+        transparent 0%, 
+        var(--darkGreen)), 
+      url('https://images.pexels.com/photos/47344/dollar-currency-money-us-dollar-47344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    height: 100vh;
+}
+.site-body{
+    height: 100%;
+    /* background-image: linear-gradient(var(--darkGreen), #0259287a); */
+}
+header{
+    margin-bottom: 1em;
+}
+header h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 1em;
+    cursor: default;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "inputs inputs inputs"
+    "inputs inputs inputs"
+    "inputs inputs inputs"
+    "amounts amounts amounts"
+    "amounts amounts amounts"
+    "amounts amounts amounts"
+    
+    "extra extra extra"
+    ;
+}
+.inputs{
+    /* background-color: crimson; */
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "description description description"
+    "date date value"
+    "btn btn btn";
+    gap: 10px;
+    grid-area: inputs;
+}
+.input{
+    background-color: var(--white);
+    font: 500 1em 'montserrat', sans-serif;
+    height: 3em;
+    border-radius: 3px;
+    border: none;
+    padding: 1em;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+
+}
+.input::placeholder{
+    font-style: italic;
+}
+.amounts{
+    /* background-color: rgb(110, 110, 221); */
+    grid-area: amounts;
+}
+.extra{
+    /* background-color: pink; */
+    grid-area: extra;
+}
+.footer{
+
+}
+#description{
+    grid-area: description;
+}
+#date{
+    grid-area: date;
+}
+#value{
+    grid-area: value;
+}
+.btn{
+    height: 3em;
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: var(--darkGreen);
+    grid-area: btn;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    transition: .2s;
+    cursor: pointer;
+}
+.btn:hover{
+    transition: .5s;
+    transform: scale(1.1);
+}
