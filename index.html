@@ -22,17 +22,25 @@
                     placeholder="Name of the amount..." class="input">
                 <input type="date" 
                     id="date" 
-                    class="input">
+                    class="input"
+                    >
                 <input type="number" 
                     id="value" 
                     placeholder="$$$"
                     class="input">
-                <div class="btn">
+                <div class="btn" onclick="addData()">
                     Add Amount
                 </div>
             </div>
             <div class="amounts">
-    
+                <table>
+                    <tbody class="table">
+                        <tr>
+                            <th>Amount</th>
+                            <th>Value</th>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="extra">
     
@@ -42,7 +50,6 @@
     
         </footer>
     </div>
-    
     <script src="index.js"></script>
 </body>
 </html>

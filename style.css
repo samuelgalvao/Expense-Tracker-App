@@ -10,17 +10,10 @@
     --grayGreen: #80BFAD;
 }
 body{
-    
-    background-image: 
-      linear-gradient(to top, 
-        transparent 0%, 
-        var(--darkGreen)), 
-      url('https://images.pexels.com/photos/47344/dollar-currency-money-us-dollar-47344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-
-    background-size: cover;
+    background-color: var(--grayGreen);
+    min-height: 600px;
     font-family: 'Montserrat', sans-serif;
     color: var(--white);
-    height: 100vh;
 }
 .site-body{
     height: 100%;
@@ -116,4 +109,37 @@ header h1{
 .btn:hover{
     transition: .5s;
     transform: scale(1.1);
+}
+.amounts{
+    grid-area: amounts;
+    display: grid;
+    background-color: var(--lightGreen);
+    width: 80%;
+    margin: 3em auto;
+    border-radius: 3px;
+    padding: 1em;
+    box-shadow: 0px 0px 10px rgba(6, 20, 12, 0.233);
+}
+table {
+    font-family: 'montserrat', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid var(--darkGreen);
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: var(--darkGreen);
+    border: 1px solid var(--white);
+
+}
+td:nth-child(odd) {
+    border-right: 1px solid var(--white);
+}
+td:nth-child(even) {
+    border-left: 1px solid var(--darkGreen);
 }
