@@ -8,16 +8,13 @@
     --gray: #88898C;
     --white: #F2F2F2;
     --grayGreen: #80BFAD;
+    --black: rgb(32, 32, 32);
 }
 body{
     background-color: var(--grayGreen);
     min-height: 600px;
     font-family: 'Montserrat', sans-serif;
     color: var(--white);
-}
-.site-body{
-    height: 100%;
-    /* background-image: linear-gradient(var(--darkGreen), #0259287a); */
 }
 header{
     margin-bottom: 1em;
@@ -28,118 +25,110 @@ header h1{
     text-align: center;
     padding-top: 1em;
     cursor: default;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    /* text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212); */
 
 }
 .container{
-    display: grid;
-    grid-template-areas: 
-    "inputs inputs inputs"
-    "inputs inputs inputs"
-    "inputs inputs inputs"
-    "amounts amounts amounts"
-    "amounts amounts amounts"
-    "amounts amounts amounts"
-    
-    "extra extra extra"
-    ;
-}
-.inputs{
-    /* background-color: crimson; */
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
     margin: auto;
+    gap: 2em;
+}
+.form-container{
+    width: 100%;
+    height: 100%;
+    
+}
+.form{
     display: grid;
-    grid-template-areas: 
-    "description description description"
-    "date date value"
-    "btn btn btn";
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    font: bold 1em 'montserrat', sans-serif;
     gap: 10px;
-    grid-area: inputs;
+    justify-items: center;
 }
-.input{
-    background-color: var(--white);
-    font: 500 1em 'montserrat', sans-serif;
-    height: 3em;
-    border-radius: 3px;
+#btn{
+    width: 100%;
+    padding: 10px;
+    font: bold 1em 'montserrat', sans-serif;
     border: none;
-    padding: 1em;
-    outline: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-
+    border-radius: 1000px;
+    max-width: 300px;
+    background-color: var(--darkGreen);
+    color: var(--white);
+    transition: .2s;
 }
-.input::placeholder{
-    font-style: italic;
-}
-.amounts{
-    /* background-color: rgb(110, 110, 221); */
-    grid-area: amounts;
-}
-.extra{
-    /* background-color: pink; */
-    grid-area: extra;
-}
-.footer{
-
+#btn:hover{
+    transform: scale(1.1);
+    transition: .5s;
 }
 #description{
-    grid-area: description;
+    
 }
-#date{
-    grid-area: date;
+#amount{
+
 }
-#value{
-    grid-area: value;
+.input{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    padding-left: 1em;
+    font: bold 1em 'montserrat', sans-serif;
 }
-.btn{
-    height: 3em;
-    width: 70%;
-    max-width: 300px;
-    margin: 0 auto;
-    background-color: var(--darkGreen);
-    grid-area: btn;
-    border-radius: 100px;
+.input::placeholder{
+    font-weight: 600;
+    font-style: italic;
+}
+.amount-container{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-    transition: .2s;
-    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 4px 4px 10px rgba(6, 17, 12, 0.233);
 }
-.btn:hover{
-    transition: .5s;
-    transform: scale(1.1);
+.h2-con{
+    /* background-color: var(--gray); */
+    width: 100%;
+    padding-left: 1em;
+    color: var(--black);
 }
-.amounts{
-    grid-area: amounts;
-    display: grid;
-    background-color: var(--lightGreen);
-    width: 80%;
-    margin: 3em auto;
-    border-radius: 3px;
-    padding: 1em;
-    box-shadow: 0px 0px 10px rgba(6, 20, 12, 0.233);
+#expense-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
-table {
-    font-family: 'montserrat', sans-serif;
+.table-sty {
     border-collapse: collapse;
     width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
 }
   
-td, th {
-    border: 1px solid var(--darkGreen);
-    text-align: left;
+.table-sty td,
+.table-sty th {
+    border: 1px solid #ddd;
     padding: 8px;
 }
   
-tr:nth-child(even) {
-    background-color: var(--darkGreen);
-    border: 1px solid var(--white);
-
+.table-sty th {
+    background-color: #ddd;
 }
-td:nth-child(odd) {
-    border-right: 1px solid var(--white);
+.remove-btn{
+    border: none;
+    cursor: pointer;
+    font: bold 1em 'montserrat', sans-serif;
 }
-td:nth-child(even) {
-    border-left: 1px solid var(--darkGreen);
+.remove-btn:hover{
+    color: crimson;
 }

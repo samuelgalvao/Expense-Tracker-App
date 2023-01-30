@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="site-body">
-        <header>
-            <h1>Expense Tracker</h1>
-        </header>
-        <div class="container">
-            <div class="inputs">
-                <input type="text"
-                    id="description" 
-                    placeholder="Name of the amount..." class="input">
-                <input type="date" 
-                    id="date" 
-                    class="input"
-                    >
-                <input type="number" 
-                    id="value" 
-                    placeholder="$$$"
-                    class="input">
-                <div class="btn" onclick="addData()">
-                    Add Amount
-                </div>
-            </div>
-            <div class="amounts">
-                <table>
-                    <tbody class="table">
-                        <tr>
-                            <th>Amount</th>
-                            <th>Value</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="extra">
-    
-            </div>
+  </head>
+  <body>
+    <header>
+      <h1>Expense Tracker</h1>
+    </header>
+    <div class="container">
+      <div class="form-container">
+        <form class="form">
+          <input type="text" id="description" name="description" class="input" placeholder="Description...">
+          <input type="number" id="amount" name="amount" class="input" placeholder="Amount...">
+          <button type="submit" id="btn">Add Expense</button>
+        </form>
+      </div>
+      <div class="amount-container">
+        <div class="h2-con">
+          <h2>Expense List</h2>
         </div>
-        <footer class="footer">
-    
-        </footer>
+        <div id="expense-list"></div>
+        <h3>Total Expense: <span id="total-expense">0</span></h3>
+      </div>
+      
     </div>
-    <script src="index.js"></script>
-</body>
+    
+    <script src="expense-tracker.js"></script>
+  </body>
 </html>
