@@ -21,24 +21,6 @@ form.addEventListener("submit",
 });
 
 
-// function addExpense() {
-//     const description = descriptionInput.value;
-//     let amount = parseFloat(amountInput.value);
-//     if (!description || isNaN(amount)) {
-//       return;
-//     }
-//     amount = parseFloat(amount.toFixed(2));
-//     expenses.push({
-//       description: description,
-//       amount: amount
-//     });
-//     renderExpenses();
-//     descriptionInput.value = "";
-//     amountInput.value = "";
-//   }
-  
-
-
 function renderExpenses() {
     expenseList.innerHTML = "";
     let total = 0;

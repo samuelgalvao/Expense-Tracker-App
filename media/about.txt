@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Hachi Maru Pop
+- Font Author: Copyright 2020 The Hachi Maru Pop Project Authors (https://github.com/noriokanisawa/HachiMaruPop)
+- Font Source: http://fonts.gstatic.com/s/hachimarupop/v17/HI_TiYoRLqpLrEiMAuO9Ysfz7rW1EM_btd8u.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
